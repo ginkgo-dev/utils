@@ -20,6 +20,11 @@ git clone $ORG_URL/android_vendor_xiaomi_trinket-common -b $BRANCH vendor/xiaomi
 rm -rf hardware/qcom-caf/sm8150/display
 git clone $ORG_URL/android_hardware_qcom_display -b $BRANCH hardware/qcom-caf/sm8150/display
 
+cd packages/apps/Updater
+git fetch https://github.com/ginkgo-dev/android_packages_apps_Updater
+git cherry-pick 76968d0f890a8362573f68d3218263139a11c14a # Updater: Switch to own changelog
+cd ../../..
+
 . build/envsetup.sh
 lunch lineage_ginkgo-userdebug
 mka bacon -j32
