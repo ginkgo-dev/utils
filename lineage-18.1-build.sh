@@ -26,5 +26,11 @@ git cherry-pick 76968d0f890a8362573f68d3218263139a11c14a # Updater: Switch to ow
 cd ../../..
 
 . build/envsetup.sh
+
+repopick 297131 # overlays: Fix inactive state Wifi Icon in Circular,Filled Kai Icon Pack
+repopick 297128 # StatusBar: Dismiss qs when screen's going off if showing
+repopick 297129 # Properly set fonts and icons on keyguard when changing styles
+repopick 297130 # LockIcon: refresh icon on overlay changes
+
 lunch lineage_ginkgo-userdebug
 mka bacon -j32
