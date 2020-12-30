@@ -9,7 +9,7 @@ MANIFEST_URL="git://github.com/LineageOS/android.git"
 BRANCH="lineage-18.1"
 
 repo init -u $MANIFEST_URL -b $BRANCH
-repo sync --force-sync --no-tag --no-clone-bundle --optimized-fetch --current-branch -f -j16
+repo sync --force-sync -c -q --no-tag --no-clone-bundle --optimized-fetch --current-branch -f -j16
 
 git clone $ORG_URL/android_device_xiaomi_ginkgo -b $BRANCH device/xiaomi/ginkgo
 git clone $ORG_URL/android_device_xiaomi_trinket-common -b $BRANCH device/xiaomi/trinket-common
