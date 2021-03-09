@@ -19,6 +19,11 @@ git clone $ORG_URL/android_prebuilts_clang_host_linux-x86_clang-sdllvm -b $BRANC
 rm -rf hardware/qcom-caf/sm8150/display
 git clone $ORG_URL/android_hardware_qcom_display -b $BRANCH hardware/qcom-caf/sm8150/display
 
+cd frameworks/av
+git fetch $ORG_URL/android_frameworks_av
+git cherry-pick 7d38f3c27219a24dbfaf1962a0a561e37a05ff59 # libmedia: Add MediaPlayer() function for backward compatibility
+cd ../..
+
 cd packages/apps/Updater
 git fetch $ORG_URL/android_packages_apps_Updater
 git cherry-pick 76968d0f890a8362573f68d3218263139a11c14a # Updater: Switch to own changelog
@@ -26,7 +31,7 @@ cd ../../..
 
 cd system/security
 git fetch $ORG_URL/android_system_security
-git cherry-pick 27be29e9049b256f801f0bd5fb2a51a4fd01ee4c
+git cherry-pick 27be29e9049b256f801f0bd5fb2a51a4fd01ee4c # keystore: Block key attestation for Google Play Services 
 cd ../..
 
 . build/envsetup.sh
