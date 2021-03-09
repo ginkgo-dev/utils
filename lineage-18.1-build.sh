@@ -12,10 +12,8 @@ repo init -u $MANIFEST_URL -b $BRANCH
 repo sync --force-sync -c -q --no-tag --no-clone-bundle --optimized-fetch --current-branch -f -j16 || exit 0
 
 git clone $ORG_URL/android_device_xiaomi_ginkgo -b $BRANCH device/xiaomi/ginkgo
-git clone $ORG_URL/android_device_xiaomi_trinket-common -b $BRANCH device/xiaomi/trinket-common
 git clone $ORG_URL/android_kernel_xiaomi_ginkgo -b $BRANCH kernel/xiaomi/ginkgo
 git clone $ORG_URL/android_vendor_xiaomi_ginkgo -b $BRANCH vendor/xiaomi/ginkgo
-git clone $ORG_URL/android_vendor_xiaomi_trinket-common -b $BRANCH vendor/xiaomi/trinket-common
 git clone $ORG_URL/android_prebuilts_clang_host_linux-x86_clang-sdllvm -b $BRANCH prebuilts/clang/host/linux-x86/clang-sdllvm
 
 rm -rf hardware/qcom-caf/sm8150/display
