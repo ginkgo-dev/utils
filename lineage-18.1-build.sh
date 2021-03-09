@@ -20,9 +20,14 @@ rm -rf hardware/qcom-caf/sm8150/display
 git clone $ORG_URL/android_hardware_qcom_display -b $BRANCH hardware/qcom-caf/sm8150/display
 
 cd packages/apps/Updater
-git fetch https://github.com/ginkgo-dev/android_packages_apps_Updater
+git fetch $ORG_URL/android_packages_apps_Updater
 git cherry-pick 76968d0f890a8362573f68d3218263139a11c14a # Updater: Switch to own changelog
 cd ../../..
+
+cd system/security
+git fetch $ORG_URL/android_system_security
+git cherry-pick 27be29e9049b256f801f0bd5fb2a51a4fd01ee4c
+cd ../..
 
 . build/envsetup.sh
 
