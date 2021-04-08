@@ -31,7 +31,7 @@ cd ../../..
 
 cd system/security
 git fetch $ORG_URL/android_system_security
-git cherry-pick 27be29e9049b256f801f0bd5fb2a51a4fd01ee4c # keystore: Block key attestation for Google Play Services 
+git cherry-pick 27be29e9049b256f801f0bd5fb2a51a4fd01ee4c # keystore: Block key attestation for Google Play Services
 cd ../..
 
 . build/envsetup.sh
@@ -43,6 +43,7 @@ repopick 297130 # LockIcon: refresh icon on overlay changes
 repopick 300111 # SystemUI: Add a tile to show power menu
 repopick 300112 # sdk: Add power button qs tile metric
 repopick 300551 # WallpaperPicker2: Fix race condition for fast-loading wallpapers
+repopick 307715 # Settings: Fix hardcoded black text in storage summary
 
 lunch lineage_ginkgo-userdebug
 mka bacon -j32
