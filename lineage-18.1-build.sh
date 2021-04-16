@@ -40,10 +40,9 @@ repopick 297131 # overlays: Fix inactive state Wifi Icon in Circular,Filled Kai 
 repopick 297128 # StatusBar: Dismiss qs when screen's going off if showing
 repopick 297129 # Properly set fonts and icons on keyguard when changing styles
 repopick 297130 # LockIcon: refresh icon on overlay changes
-repopick 300111 # SystemUI: Add a tile to show power menu
-repopick 300112 # sdk: Add power button qs tile metric
+#repopick 300111 # SystemUI: Add a tile to show power menu
+#repopick 300112 # sdk: Add power button qs tile metric
 repopick 300551 # WallpaperPicker2: Fix race condition for fast-loading wallpapers
-repopick 307715 # Settings: Fix hardcoded black text in storage summary
 
 lunch lineage_ginkgo-userdebug
 mka bacon -j32
