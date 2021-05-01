@@ -42,7 +42,6 @@ repopick 297129 # Properly set fonts and icons on keyguard when changing styles
 repopick 297130 # LockIcon: refresh icon on overlay changes
 #repopick 300111 # SystemUI: Add a tile to show power menu
 #repopick 300112 # sdk: Add power button qs tile metric
-repopick 300551 # WallpaperPicker2: Fix race condition for fast-loading wallpapers
 
 lunch lineage_ginkgo-userdebug
 mka bacon -j32
